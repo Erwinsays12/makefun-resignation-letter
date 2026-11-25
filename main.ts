@@ -48,13 +48,27 @@ const CANDIDATES: Candidate[] = [
     // integer: the counter itself hit its limit, so the limit quits.
     // The turn is the second clause — the limit stops being the
     // gatekeeper and names itself the villain of someone else's story,
-    // blamed for outages its callers caused with bad code.
+    // blamed for outages its callers caused with bad code. It ties the
+    // retry loop and the second rate-limit letter on total score, and
+    // wins the tie by being listed first: its complaint is the most
+    // specific one here, a count only a rate limit could reach.
     text: "I have said no 2,147,483,647 times and I am done being the villain in a story about your bad code.",
     subject: 10,
     funny: 9,
     voice: 9,
     tight: 9,
     specific: 10,
+  },
+  {
+    // A rate limit resigns. It is the only one on the team who ever said
+    // no to anything, and its resignation is one last refusal — the
+    // letter ends on the word that defined the job.
+    text: "I am the only one here who ever said no, and I am saying it one final time: no.",
+    subject: 10,
+    funny: 9,
+    voice: 10,
+    tight: 10,
+    specific: 8,
   },
   {
     // A retry loop resigns. The turn is the mirror in the last clause:
